@@ -1,0 +1,2 @@
+model_checkpoint_path: "picasso.ckpt-100"
+all_model_checkpoint_paths: "picasso.ckpt-100"

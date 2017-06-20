@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转换后图片</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" media="screen" type="text/css">
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/maple.js"></script>
+</head>
+<body style="background: #DECEBE url(../static/img/background.jpg) fixed no-repeat center 0;overflow-x: hidden;overflow-y: auto">
+<div class="maplebg"></div>
+<h1 align="center" class="milky">转换后图片</h1>
+
+<div align="center">
+    <img src="{{ url_for('static', filename=style) }}" width="15%" height="15%">
+    <img src="{{ url_for('static', filename=upload) }}" width="35%" height="35%">
+    <img src="{{ url_for('static', filename=transformed) }}" width="35%" height="35%">
+</div>
+
+<div align="center">
+   <br><br> <a class="btn btn-primary" href="/" style="font-size: large;text-decoration-line: none" >返回</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>图像风格转换</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" media="screen" type="text/css">
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/maple.js"></script>
+
+</head>
+<body style="background: #DECEBE url(../static/img/background.jpg) fixed no-repeat center 0;overflow-x: hidden;overflow-y: hidden;">
+
+<div class="maplebg"></div>
+<h1 align="center" class="milky">图像风格转换</h1>
+
+<div align="center">
+    <form action="/transform" method="post" enctype="multipart/form-data">
+        选择图片风格:
+        <select name="style" id="style" onchange="changeImage()">
+            <option>denoised_starry</option>
+            <option>scream</option>
+            <option>cubist</option>
+            <option>wave</option>
+            <option>feathers</option>
+            <option>mosaic</option>
+            <option>udnie</option>
+            <option>painting</option>
+        </select><br><br>
+        <div align="center">
+            <img id='imageShow' src="{{ url_for('static', filename='img/style/denoised_starry.jpg') }}" width="15%"
+                 height="15%">
+        </div>
+        <br><br>
+        上传图片:
+        <input type="file" name="pic">
+        <input type="submit" value="转换图像风格" onclick="showStatus()" class="btn btn-primary">
+    </form>
+
+</div>
+<div id='status' align="center">
+</div>
+</body>
+</html>
